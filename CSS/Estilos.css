@@ -1,0 +1,51 @@
+/*<!--
+CSS3 = HOJAS DE ESTILO
+Maquetado= HTML5 + CSS3
+
+Hoja de Estilo:
+	*Selectores
+		- Etiqueta
+		atributus : calor;
+		- Identificador
+		atributus : calor;
+		- Clase
+		atributus : calor;
+		- Pseudoelecmento 
+		atributus : calor;
+*Todos en orden alfabético
+
+		-->*/
+
+body{
+	/*background: blue;*/
+	/*background: rgb(255,255,255);*/
+	/*background: rgba(255,0,0,1);*/
+	/*background: #A9CCFF;*/
+	background: blue;
+	color: white;
+	
+}
+
+header{
+	border: 50px solid red;
+	text-align: center;
+}
+
+header nav ul li{
+	background : purple;
+	border : 1px solid black;
+	border-radius: 3px;
+	display: block;
+	display: inline-block;
+	width: 90px;
+}
+
+header nav ul li:hover
+{
+	background : black;
+	border : 1px solid purple;
+	border-radius: 100px;
+	display: block;
+	display: inline-block;
+	width: 90px;
+}
