@@ -50,6 +50,33 @@ header nav{
 	vertical-align: top;
 }
 
+#segundaseccion article{
+	text-align: right;
+	padding-right:  122px;
+
+}
+
+#terceraseccion article{
+	display: inline-block;
+	margin-right: 4px;
+	width: 23%;
+	vertical-align: top;
+}
+
+#terceraseccion article img{
+	/* Alineacion vertical de la imagen*/
+	vertical-align: middle;
+}
+
+#terceraseccion article input{
+	border-radius: 5px
+}
+
+#terceraseccion article input[type= "button"]{
+	background:#A4CD28;
+	color:white;
+}
+
 #secc01art01{
 	margin-left: 30px;
 	width: 60%;
@@ -71,14 +98,16 @@ header nav{
 	content: "•";
 }
 
-#segundaseccion article{
-	text-align: right;
-	padding-right:  122px;
-
+.colorazul{
+	color: #629ad4 ;
 }
 
 .colorrosa{
-	color: pink ;
+	color: #FF0099 ;
+}
+
+.colorverde{
+	color: #8bc500 ;
 }
 
 .nito{
