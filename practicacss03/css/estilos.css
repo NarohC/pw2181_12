@@ -1,0 +1,48 @@
+body{
+	font-size: 14px; /*1em*/
+	margin:0 auto;
+	background-color: #2B2B2B;
+	/*border: 5px white;*/
+
+}
+
+/*body article{
+	display: inline-block;
+	border: 5px solid white
+}*/
+#trade {
+	border: 2px solid white;
+	background-color: #b4d052;
+}
+
+#realstate{
+	border: 2px solid white;
+	background-color: #545454;
+
+}
+
+#tourism{
+	border: 2px solid white;
+	background-color: #d52e3f;
+}
+
+#technologies{
+	border: 2px solid white;
+	background-color: #e4e4e4;
+}
+
+.colorblanco{
+	color:white;
+}
+
+.colorgris{
+	color:grey;
+}
+
+.letramediana{
+	font-size: 1.2em;
+}
+
+.letragrande{
+	font-size: 2.5em;
+}
