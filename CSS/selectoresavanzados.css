@@ -1,0 +1,41 @@
+img[alt]{
+	border:5px solid blue ;
+	width:100%;
+}
+
+img[src="img/joey.jpg"]{
+	width: 400px;
+}
+
+img[src^="i"]{
+	width: 400px;
+}
+
+img[src$="jpg"]{
+	width: 40px;
+}
+
+img[src*="mg/"]{
+	width: 600px;
+}
+/* ~  indica que estos selectores estan 
+separados por espacios*/
+article[class~="ingles"]{
+	border: 1px dashed red;
+
+}
+/*Separado por guiones*/
+article[class|="ingles"]{
+	font-weight: bold;
+	border: 1px dashed blue;
+
+}
+
+div > p{ /*solo hijos directos*/
+	font-weight: bold;
+	color: yellow;
+}
+
+div p{ /*todos los elementos p seran seleccionados*/
+	color: red;
+}

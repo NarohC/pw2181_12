@@ -23,7 +23,7 @@ article p{
 	height: 400px;
 	width: 800px;
 }*/
-article:hover{
+/*article:hover{
 	background: black;
 	color: greenyellow;
 	-webkit-transform:translate(150px, 300px);
@@ -31,4 +31,14 @@ article:hover{
 	-ms-transform:translate(150px, 300px);
 	-moz-transform:translate(150px, 300px);
 	transform:translate(150px, 300px);
+}*/
+
+article:hover{
+	background: black;
+	color: greenyellow;
+	-webkit-transform: translate(150px, 150px) rotate(360deg) scale(2.3) skew(-10deg, 10deg);
+	-o-transform: translate(150px, 150px) rotate(360deg) scale(2.3) skew(-10deg, 10deg);
+	-ms-transform: translate(150px, 150px) rotate(360deg) scale(2.3) skew(-10deg, 10deg);
+	-moz-transform: translate(150px, 150px) rotate(360deg) scale(2.3) skew(-10deg, 10deg);
+	transform: translate(150px, 150px) rotate(360deg) scale(2.3) skew(-10deg, 10deg);
 }
