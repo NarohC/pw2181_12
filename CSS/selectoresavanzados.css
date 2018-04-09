@@ -39,3 +39,57 @@ div > p{ /*solo hijos directos*/
 div p{ /*todos los elementos p seran seleccionados*/
 	color: red;
 }
+
+/*Seleccionar solo el elemento <p> 
+que esta inmediantamente despues 
+del eemento <h2> - Hermano adyacente*/
+/*h2+p{
+	color:green;
+}*/
+
+/*Seleccionar solo el elemento <p> 
+del elemento especificado(<h2>) 
+- Hermano General*/
+/*h2 ~ p{
+	color:gray;
+}*/
+
+section:not(#referencias){
+	color: hotpink;
+}
+
+li:nth-child(odd){/*impares*/
+	color:green;
+}
+
+li:nth-child(even){/*impares*/
+	color:blue;
+}
+
+li:nth-child(5){
+	color:yellow;
+}
+
+li:nth-last-child(1){
+	color:red;
+}
+
+p:first-line{
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
