@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gato</title>
+</head>
+<body>
+	Tiempo de Turno: 
+	<div>
+		<button id="11" onclick="cambia(11); pararTurno(); inciarTurno()">0</button>
+		<button id="12" onclick="cambia(12); pararTurno(); inciarTurno()">0</button>
+		<button id="13" onclick="cambia(13); pararTurno(); inciarTurno()">0</button><br>
+		<button id="21" onclick="cambia(21); pararTurno(); inciarTurno()">0</button>
+		<button id="22" onclick="cambia(22); pararTurno(); inciarTurno()">0</button>
+		<button id="23" onclick="cambia(23); pararTurno(); inciarTurno()">0</button><br>
+		<button id="31" onclick="cambia(31); pararTurno(); inciarTurno()">0</button>
+		<button id="32" onclick="cambia(32); pararTurno(); inciarTurno()">0</button>
+		<button id="33" onclick="cambia(33); pararTurno(); inciarTurno()">0</button>
+
+	</div>
+
+	<script>
+		var turno=false;
+		var temp1, temp2
+
+		function cambia(coord){
+			if(turno==false){
+				document.getElementById(coord).innerHTML = "X";
+				turno= true;
+			} else{
+				document.getElementById(coord).innerHTML = "O";
+				turno= false;
+			}
+		}
+
+		function checaGana(){
+			
+
+		}
+	</script>
+</body>
+</html>
