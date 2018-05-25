@@ -1,16 +1,22 @@
-
 <?php
+	
 	$p1 = $_GET["parametro1"];
-	for ($i=0; $i < 10; $i++) { 
-		# code...
-		print("Hola Prros PHP ".$i."<br>");
+
+	for ($i = 0; $i <  10 ; $i++) { 
+		print("Hola PHP " . $i)."<br>";
 	}
 ?>
-<html>
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<title>Document</title>
+	<meta charset="UTF-8">
+	<title>Wea</title>
 </head>
 <body>
-	<?php print($p1) ?>
+	<?php
+		print($p1);
+	?>
 </body>
 </html>
+
