@@ -67,11 +67,16 @@ var inicioApp = function(){
             buscarUsuario();
         }
     }
-    var Guaradar= function{
-        var usuario=$("#txtNombreUsuario").val();
-        var nombre=$("#txtNombre").val();
-        var clave=$("#txtClave"),val();
-        if(usuario!="" && nombre!="" && clave!=""){
+    var Guardar = function(){
+        var usuario = $("#txtNombreUsuario").val();
+        var nombre  = $("#txtNombre").val();
+        var clave   = $("#txtClaveUsuario").val();
+        var parametros = "opc=guardarUsuario"+
+        				 "&usuario="+usuario+
+        				 "&nombre="+nombre+
+        				 "&clave="+clave+
+        				 "&aleatorio="+Math.random();
+        if (usuario != "" && nombre != "" && clave != "" ) {
             $.ajax({
             cache:false,
             type: "POST",
@@ -79,35 +84,89 @@ var inicioApp = function(){
             url: "php/guardarusuario.php",
             data: parametros,
             success: function(response){
-                if (response.respuesta == true) {
-                    alert("datos incertados correctamente");
-                    $("frmUsuarios > input").val("");
+                if(response.respuesta == true){
+                    alert("Datos Guardados Correctamente");
+                    $("#frmUsuarios > input").val("");
                 }else{
-                    alert("Ocurrio un error, intente de nuevo invalido");
-                }  
+                    alert("Ocurrio un error, intente de nuevo mas tarde");
+                }
+
             },
             error: function(xhr,ajaxOptions,throwError){
-                
+               
                
             }
         });
         }else{
-            alert("Llena todo PRRO");
+            alert("Llene todos los campos");
         }
+    }
+    var Borrar = function(){
+    	var usuario  = $("#txtNombreUsuario").val();
+    	var nombre   = $("#txtNombre").val();
+    	var pregunta = prompt("Seguro de borrar a "+nombre+"? (si/no)","no");
+		var parametros = "opc=borrarUsuario"+
+        				 "&usuario="+usuario+
+        				 "&nombre="+nombre+
+        				 "&aleatorio="+Math.random();
+    	if(pregunta != null && pregunta == "si"){
+    		//Aqui va el AJAX  . . . . . 
+    		$.ajax({
+            cache:false,
+            type: "POST",
+            dataType: "json",
+            url: "php/borrarusuario.php",
+            data: parametros,
+            success: function(response){
+                if(response.respuesta == true){
+                    alert("Dato Borrado Correctamente");
+                    $("#frmUsuarios > input").val("");
+                }else{
+                    alert("Ocurrio un error, intente de nuevo mas tarde");
+                }
+
+            },
+            error: function(xhr,ajaxOptions,throwError){
+               
+               
+            }
+        });
+    	}
+    }
+
+    var Listado = function(){
+        $("main > section").hide("slow");
+        $("#frmListado").show("slow");
+        var parametros = "opc=listado"+
+                         "&aleatorio="+Math.random();
+
+        $.ajax({
+            cache:false,
+            type: "POST",
+            dataType: "json",
+            url: "php/listado.php",
+            data: parametros,
+            success: function(response){
+                if(response.respuesta == true){
+                    alert(response.tabla);
+                    $("#tblListado").append(response.tabla);
+                }else{
+                    alert("Usuario o Clave incorrecta");
+                }
+
+            },
+            error: function(xhr,ajaxOptions,throwError){
+                console.log(xhr);
+               
+            }
+        });
     }
 
     $("#btnAceptar").on("click",Aceptar);
-    $("#txtNombreUsuario").on("keypress",teclaNombreUsuario)
-    $("#btnGuardar").on("click",Guardar)
+    $("#txtNombreUsuario").on("keypress",teclaNombreUsuario);
+    $("#btnGuardar").on("click",Guardar);
+    $("#btnBorrar").on("click",Borrar);
+    $("#btnListado").on("click",Listado);
 }
 
 $(document).ready(inicioApp);
-
-
-
-
-
-
-
-
-
